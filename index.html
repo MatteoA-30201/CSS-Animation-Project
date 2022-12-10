@@ -13,27 +13,40 @@
 </head>
 
 <body id="index">
-  <div id="index-intro-container">
-    <div class="index-intro">
-      <h1>CSS Animations</h1>
+  <div data-aos="fade-down">
+    <div id="index-intro-container">
+      <div class="index-intro">
+        <h1>CSS Animations</h1>
+      </div>
     </div>
   </div>
-  <div id="threeD-animation-container">
-    <div class="threeD-box" id="saturn-title">
-      <h2>Saturn</h2>
-    </div>
-    <div class="threeD-box" id="solar-system-title">
-      <h2>The<br> Solar<br> System</h2>
-    </div>
-    <div class="threeD-box" id="unique-moon-title">
-      <h2>The<br> Unique Moons<br> of Our<br> Solar System</h2>
-    </div>
-  </div>
+  <div data-aos="fade-up">
+    <div id="threeD-animation-container">
+      <div id="main-menu">
+        <div id="rotation-shape" class="circle-rotation">
+          <div class="threeD-box" id="saturn-title">
+            <a href="Saturn.html">
+              <h2>Saturn</h2>
+            </a>
+          </div>
+          <div class="threeD-box" id="solar-system-title">
+            <a href="The-Solar-System.html">
+              <h2>The<br> Solar<br> System</h2>
+            </a>
+          </div>
+          <div class="threeD-box" id="unique-moon-title">
+            <a href="UniqueMoons.html">
+              <h2>The<br> Unique Moons<br> of Our<br> Solar System</h2>
+            </a>
+            </div< </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 
 </html>

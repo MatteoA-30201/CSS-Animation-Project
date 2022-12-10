@@ -8,49 +8,68 @@
 }
 
 #saturn-title {
+  background-image: url("background-images/PIA21046.jpg");
+  background-size: 475px 400px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  border: 4px inset #e0fbfc;
-  width: 200px;
-  height: 200px;
-  font-size: 20px;
+  border: 4px inset rgba(224, 251, 252);
+  width: 475px;
+  height: 400px;
+  font-size: 25px;
   padding: 5px;
+  margin-left: 5px;
+  background-color: rgba(157, 180, 192, 0.3);
+  color: #9db4c0;
 }
 
 #solar-system-title {
+  background-image: url("background-images/v5n22xGyNNHLzSnSArbrVH.jpg");
+  background-size: 540px 400px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   border: 4px inset #e0fbfc;
-  width: 200px;
-  height: 200px;
-  font-size: 20px;
+  width: 540px;
+  height: 400px;
+  font-size: 25px;
   padding: 5px;
-  margin-left: 40px;
+  margin-left: 5px;
+  background-color: rgba(157, 180, 192, 0.3);
+  color: #9db4c0;
 }
 
 #unique-moon-title {
+  background-image: url("background-images/486_PIA11133 (1).jpg");
+  background-size: 345px 400px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   border: 4px inset #e0fbfc;
-  width: 200px;
-  height: 200px;
-  font-size: 20px;
-  padding: 10px;
-  margin-left: 40px;
+  width: 345px;
+  height: 400px;
+  font-size: 25px;
+  padding: 5px;
+  margin-left: 5px;
+  background-color: rgba(157, 180, 192, 0.3);
+  color: #9db4c0;
+}
+
+.threeD-box {
+  transition: transform 2s, opacity 2s;
+  outline: 2px inset #93ced7;
 }
 
 #index {
   background-color: #253237;
   color: #9db4c0;
+  background-image: url("background-images/EB57BB7D-0F0D-4282-8DC0-D10164FA8894.jpeg");
 }
 
 #index-intro-container {
@@ -60,30 +79,63 @@
   justify-content: center;
   align-items: center;
   align-content: center;
+  top: -40px;
 }
 
 #threeD-animation-container {
-  perspective: 600px;
+display: flex;
+width: 100%;
+height: 800px;
+perspective: 600;
+perspective-origin: 50% 225px;
+animation: floating 8s ease-in-out infinite;
+}
+
+#main-menu {
+  outline: 10px ridge #93ced7;
+  outline-offset: -3.5rem;
+  border-radius: 200px;
+  display: block;
+  transform: translateZ(-200px);
+  width: 100%;
+  height: 100%;
+  transition: transform 10s;
   transform-style: preserve-3d;
-  display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   align-content: center;
+}
+
+.circle-rotation > #saturn-title {
+  transform: rotateY(200deg) translate3d(-710px,0px,-203px);
+}
+
+.circle-rotation > #solar-system-title {
+  transform: rotateY(-300deg) translate3d(90px,0px,335px);
+}
+
+.circle-rotation > #unique-moon-title {
+  transform: rotateY(300deg) translateZ(340px);
+}
+
+#rotation-shape {
   position: relative;
-  top: 180px;
-  animation: main-menu 10s ease infinite;
+  top: 160px;
+  margin: 0 auto;
+  height: 200px;
+  width: 1300px;
+  transform-style: preserve-3d;
+  animation: main-menu 7s linear infinite;
+  display: flex;
 }
 
 @keyframes main-menu {
   0% {
-    transform: rotate3d(0,0,0);
-  }
-  50% {
-    transform: rotate3d(0,150deg,50deg);
+    transform: rotateY(0deg);
   }
   100% {
-    transform: rotate3d(0,0,0);
+    transform: rotateY(-360deg);
   }
 }
 
